@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
     public bool isGameActive;
     private int score;
+    public GameObject titleScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -63,5 +64,7 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
+
+        titleScreen.gameObject.SetActive(false);
     }
 }
